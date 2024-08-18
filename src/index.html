@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <form class="search-form js-search-form" action="">
+      <input
+        class="search-input js-search-input"
+        type="search"
+        name="search"
+        placeholder="Search images..."
+      />
+      <button class="search-button" type="submit">Search</button>
+    </form>
+
+    <ul class="gallery js-gallery"></ul>
+
+    <span class="loader js-loader is-hidden"></span>
+
     <script type="module" src="./main.js" defer></script>
   </body>
 </html>
