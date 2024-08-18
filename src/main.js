@@ -23,6 +23,16 @@ const onSearchFormSubmit = (event) => {
 
     const searchValue = searchForm.elements.search.value;
 
+     if (!searchValue) {
+        iziToast.error({
+            title: 'Error',
+            message: 'Please enter a search query.',
+            position: "topRight",
+        });
+        loaderEl.classList.add('is-hidden');
+        return;
+    }
+
     fetchImg(searchValue)
     .then(data => {
 
